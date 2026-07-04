@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Para mi Solecito 💜</title>
+<style>
+body{margin:0;font-family:Segoe UI,Arial;background:linear-gradient(135deg,#5b2a86,#8e44ad,#c39bd3);overflow:hidden;color:#fff}
+#bg span{position:fixed;bottom:-40px;animation:up 8s linear infinite;font-size:22px}
+@keyframes up{to{transform:translateY(-120vh);opacity:0}}
+.wrap{display:flex;justify-content:center;align-items:center;height:100vh;padding:18px}
+.card{background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);max-width:560px;width:100%;border-radius:22px;padding:28px;text-align:center}
+button{background:#b57cff;color:white;border:none;padding:13px 24px;border-radius:30px;font-size:18px;cursor:pointer}
+.bar{height:18px;background:#ffffff44;border-radius:99px}.fill{height:100%;width:0;background:#e0b3ff;transition:2s;border-radius:99px}
+#msg{white-space:pre-line;line-height:1.8}
+</style></head><body><div id="bg"></div><div class="wrap"><div class="card"><h1 id=t>Hola, Solecito ☀️💜</h1><div id=c><p>Preparé una pequeña sorpresa para la persona que más ilumina mis días.</p></div><button id=btn onclick="next()">Empezar</button></div></div>
+<script>
+for(let i=0;i<50;i++){let s=document.createElement("span");s.innerHTML=Math.random()>.5?"💜":"✨";s.style.left=Math.random()*100+"vw";s.style.animationDelay=Math.random()*8+"s";s.style.fontSize=(18+Math.random()*20)+"px";bg.appendChild(s);}
+let step=0;
+function next(){step++;
+if(step==1){t.innerHTML="🔍 Escaneando...";c.innerHTML="<h2>Kyrsthen Gabriela</h2><p>Alias detectados:</p><h3>☀️ Solecito<br>👸 Princesa Colorada<br>🍬 Bombón de Caramelo</h3><p>Resultado: <b>La persona más especial del mundo. 💜</b></p>";}
+if(step==2){t.innerHTML="📊 Resultado";c.innerHTML=`Belleza<div class=bar><div id=a class=fill></div></div><br>Dulzura<div class=bar><div id=b class=fill></div></div><br>Lo mucho que Jorge te quiere<div class=bar><div id=d class=fill></div></div>`;setTimeout(()=>{a.style.width="100%";b.style.width="100%";d.style.width="100%"},200);}
+if(step==3){t.innerHTML="🏆 Premios";c.innerHTML="<h3>🥇 Mejor sonrisa</h3><h3>🥇 Mejor abrazo</h3><h3>🥇 Dueña oficial del corazón de Jorge 💜</h3>";}
+if(step==4){t.innerHTML="💌 Para ti";c.innerHTML="<div id=msg></div>";let txt=`Solecito...
+
+Gracias por llegar a mi vida.
+
+Cada sonrisa tuya hace que mis días sean mejores.
+
+No sé qué nos espera mañana, pero sí sé que quiero seguir construyendo recuerdos contigo.
+
+Gracias por ser mi Princesa Colorada, mi Bombón de Caramelo y mi lugar favorito.
+
+Te quiero muchísimo.
+
+Con todo mi cariño,
+
+Jorge 💜`;msg.textContent=txt;btn.textContent="Una última cosa...";}
+if(step==5){document.body.style.background="linear-gradient(180deg,#1f102e,#5b2a86)";c.innerHTML="<h2>💜 ¿Sabes cuál fue uno de los mejores días de mi año?</h2>";btn.textContent="Sí";}
+if(step==6){c.innerHTML="<h1>☀️ El día en que llegaste a mi vida.</h1><p>Y todavía espero seguir viviendo muchísimos momentos contigo.</p>";btn.textContent="Una última pregunta...";}
+if(step==7){c.innerHTML="<h2>💜 ¿Quieres seguir creando recuerdos conmigo?</h2>";btn.textContent="Obviamente sí 😄";}
+if(step==8){btn.style.display="none";for(let i=0;i<150;i++){setTimeout(()=>{let h=document.createElement("span");h.innerHTML="💜";h.style.position="fixed";h.style.left=Math.random()*100+"vw";h.style.top="-20px";h.style.fontSize=(18+Math.random()*22)+"px";h.style.transition="5s linear";document.body.appendChild(h);setTimeout(()=>{h.style.top="110vh";h.style.opacity=0;},50)},i*20)}
+c.innerHTML="<h1>💜 Te quiero muchísimo, Solecito.</h1><p>Gracias por ser mi Princesa Colorada.<br>Gracias por ser mi Bombón de Caramelo.<br><br><b>Te elijo hoy y todos los días.</b><br><br>PD: Si llegaste hasta aquí... tienes derecho a reclamar un abrazo y un beso de Jorge. 😘</p>";}
+}
+</script></body></html>
